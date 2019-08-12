@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: wordpress-1
+  name: wordpress-2
   namespace: dev
 spec:
   ports:
   - port: 80
   selector:
-    app: wordpress-1
+    app: wordpress-2
  # clusterIP: None

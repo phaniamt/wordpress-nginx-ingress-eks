@@ -81,8 +81,8 @@ server {
     server_name  rancher.yphanikumar.xyz;
 
     location / {
-    resolver kube-dns.kube-system.svc.cluster.local ipv6=off;
-    set $target https://rancher.dev.svc.cluster.local:443;
+   # resolver kube-dns.kube-system.svc.cluster.local ipv6=off;
+    set $target https://35.221.53.20:443;
     proxy_pass  $target;
     proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
     proxy_redirect off;

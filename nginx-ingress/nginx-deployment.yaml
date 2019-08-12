@@ -18,6 +18,7 @@ spec:
     metadata:
       labels:
         app: nginx-wordpress
+        version: ${BUILD_NUMBER}
     spec:
       containers:
         - name: nginx-wordpress

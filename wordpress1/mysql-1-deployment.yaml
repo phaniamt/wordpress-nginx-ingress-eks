@@ -1,21 +1,22 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: mysql
+  name: mysql-1
+  namespace: dev
 spec:
   selector:
     matchLabels:
-      app: mysql
+      app: mysql-1
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: mysql
+        app: mysql-1
     spec:
       containers:
       - image: mysql:5.7
-        name: mysql
+        name: mysql-1
         args:
           - "--ignore-db-dir=lost+found"
         env:

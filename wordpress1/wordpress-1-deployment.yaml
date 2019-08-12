@@ -20,6 +20,7 @@ spec:
       labels:
         app: wordpress-1
         tier: frontend
+        version: ${BUILD_NUMBER}
     spec:
       containers:
       - image: wordpress

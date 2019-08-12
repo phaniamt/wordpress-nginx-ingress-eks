@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: nginx-wordpress
-          image: phanikumary1995/nginx-wordpress-eks
+          image: phanikumary1995/wordpress-nginx-ingress-eks
           imagePullPolicy: Always
           ports:
             - name: http

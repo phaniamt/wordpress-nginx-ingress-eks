@@ -2,6 +2,7 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: nginx-wordpress
+  namespace: dev
 spec:
   selector:
     matchLabels:
@@ -28,12 +29,16 @@ spec:
             - name: https
               containerPort: 443
           readinessProbe:
-            tcpSocket:
+#            tcpSocket:
+            httpGet:
+              path: /
               port: 80
             initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
-            tcpSocket:
+#            tcpSocket:
+            httpGet:
+              path: /
               port: 80
             initialDelaySeconds: 15
             periodSeconds: 20	

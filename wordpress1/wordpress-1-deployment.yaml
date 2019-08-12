@@ -28,7 +28,7 @@ spec:
         name: wordpress-1
         env:
         - name: WORDPRESS_DB_HOST
-          value: mysql
+          value: mysql-1
         - name: WORDPRESS_DB_USER
           valueFrom:
             secretKeyRef:
